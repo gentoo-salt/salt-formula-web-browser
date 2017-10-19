@@ -1,8 +1,8 @@
 {% if grains['os'] == 'Gentoo' %}
 
-{% set license_file = '/etc/portage/package.accept_keywords/all' %}
+{% set license_file = '/etc/portage/package.license/all' %}
 
-{% for item in [{'www-client/google-chrome-beta':'google-chrome','www-client/vivaldi':'Vivaldi'}] %}
+{% for item in [{'www-client/google-chrome-beta':'google-chrome','www-client/vivaldi':'Vivaldi','www-client/opera':'OPERA-2014'}] %}
 {% for pkg, license in item.iteritems() %}
 {{ pkg }}:
   file.replace:
