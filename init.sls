@@ -5,7 +5,7 @@ include:
 
 {% set keywords_file = '/etc/portage/package.accept_keywords/all' %}
 
-{% for pkg in 'www-client/google-chrome-beta','www-client/firefox','www-client/opera','www-client/vivaldi' %}
+{% for pkg in 'www-client/google-chrome','www-client/firefox','www-client/opera','www-client/vivaldi' %}
 keyword-{{ pkg }}:
   file.replace:
     - name: {{ keywords_file }}
